@@ -1,0 +1,36 @@
+M2VR - Mafia II Classic VR MOD
+Freeware License
+
+Copyright (c) 2026 josvitorkjr45. All rights reserved, except as granted below.
+
+1. Grant. You may use, copy and redistribute the official M2VR package
+   (installer, ZIP and the files inside it), free of charge, provided it is
+   distributed UNMODIFIED, complete, and together with this license and the
+   THIRD_PARTY_LICENSES.md file.
+
+2. Restrictions. You may NOT: (a) sell, rent or otherwise charge for the
+   package or access to it; (b) modify, decompile or repackage the M2VR
+   binaries (m2vr.asi, M2VR-Launcher.exe, Patch-Mafia2.exe) and redistribute
+   the result; (c) present the package as your own work or remove the
+   author's credits.
+
+3. Source code. The M2VR source code is not published and is not covered by
+   this license. Nothing here grants any right to the source code.
+
+4. Third-party components. The package includes third-party software
+   (MinHook, DXVK, Ultimate ASI Loader, OpenXR loader, jsoncpp). Each one
+   remains under its own license, listed in THIRD_PARTY_LICENSES.md. The
+   restrictions in this license apply only to M2VR's own files, not to
+   these third-party components.
+
+5. No affiliation. M2VR is a fan-made, non-profit project. It contains no
+   game files and has no connection with 2K Games or Hangar 13. "Mafia II"
+   is a trademark of its respective owners. You need your own legal copy of
+   the game.
+
+6. No warranty. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+   KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+   FROM THE USE OF THE SOFTWARE. Use it at your own risk. Back up your
+   mafia2.exe before patching (the installer creates mafia2.exe.bak).
