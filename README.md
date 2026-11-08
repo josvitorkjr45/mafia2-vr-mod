@@ -40,15 +40,15 @@ Head-tracked stereo · hands and weapons on the controllers · a real steering w
 
 ## Compatibility
 
-> **IMPORTANT:** Mafia II Classic is a 32-bit game, and the executable needs the 4 GB patch so the executable can use 4 GB of RAM and thus the mod works correctly. M2VR was developed for version 1.0.0.2 Complete Edition and depends on fixed addresses in the executable to hook, used by (the camera, the shots, the reloads, the characters' bones and the menus — besides reading data at specific positions). The Steam version also works, but showed several bugs in testing. To solve these problems, I created a patch `Patch-Mafia2.exe`, which applies the 4 GB RAM support patch and makes the compatibility adjustments needed for the Steam executable or other 1.0.0.2 editions, making the Steam version 100% compatible with the mod.
+> **IMPORTANT:** Mafia II Classic is a 32-bit game, and the executable needs the 4 GB patch so the executable can use 4 GB of RAM and thus the mod works correctly. M2VR was developed for version 1.0.0.1 Complete Edition and depends on fixed addresses in the executable to hook, used by (the camera, the shots, the reloads, the characters' bones and the menus — besides reading data at specific positions). The Steam version also works, but showed several bugs in testing. To solve these problems, I created a patch `Patch-Mafia2.exe`, which applies the 4 GB RAM support patch and makes the compatibility adjustments needed for the Steam executable or other 1.0.0.1 editions, making the Steam version 100% compatible with the mod.
 
 | Item | Status |
 | --- | --- |
 | Meta Quest 2 + Virtual Desktop | **Tested** |
 | Quest 2 via SteamVR | The VR session opened and the controllers worked **Tested** |
 | Quest 3 / 3S / Pro, Pico 4, Index, Reverb G2, Vive Pro 2, Beyond, PSVR2 | Although there are controller and resolution profiles in the launcher for these devices, I don't know how they behave in practice, bugs may occur. |
-| `mafia2.exe` **1.0.0.2** **Digital Deluxe Edition** (100% compatible) | (4 GB RAM patch must be applied) |
-| `mafia2.exe` **1.0.0.2** **Steam Version** (100% compatible with custom patch) | Because of the way the mod was made, the protected executable version, although it works, has many bugs, so I created a patch for the Steam Mafia 2 executable that applies the 4 GB RAM patch and modifies some sections of the executable and makes it 100% compatible with the mod. |
+| `mafia2.exe` **1.0.0.1** **Digital Deluxe Edition** (100% compatible) | (4 GB RAM patch must be applied) |
+| `mafia2.exe` **1.0.0.1** **Steam Version** (100% compatible with custom patch) | Because of the way the mod was made, the protected executable version, although it works, has many bugs, so I created a patch for the Steam Mafia 2 executable that applies the 4 GB RAM patch and modifies some sections of the executable and makes it 100% compatible with the mod. |
 | Mafia II Definitive Edition | Not supported |
 
 Requirements: Windows 10/11, a Vulkan GPU (because of DXVK), an active **32-bit** OpenXR runtime (Virtual Desktop, Meta Link or SteamVR), Install the Microsoft Visual C++ Redistributable 2015–2022 (x86) (https://aka.ms/vc14/vc_redist.x86.exe) before launching M2VR.
