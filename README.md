@@ -6,7 +6,7 @@
 
 Head-tracked stereo · hands and weapons on the controllers · a real steering wheel · menus on a fixed screen
 
-![version](https://img.shields.io/badge/version-0.0.2%20alpha-9b1b14)
+![version](https://img.shields.io/badge/version-0.0.3%20alpha-9b1b14)
 ![platform](https://img.shields.io/badge/Windows-10%20%2F%2011-444)
 ![api](https://img.shields.io/badge/VR-OpenXR-c8a24a)
 ![license](https://img.shields.io/badge/license-Freeware-444)
