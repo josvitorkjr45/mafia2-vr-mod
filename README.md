@@ -6,37 +6,29 @@
 
 Head-tracked stereo · hands and weapons on the controllers · a real steering wheel · menus on a fixed screen
 
-![version](https://img.shields.io/badge/version-0.0.3%20alpha-9b1b14)
+![version](https://img.shields.io/badge/version-0.0.4%20alpha-9b1b14)
 ![platform](https://img.shields.io/badge/Windows-10%20%2F%2011-444)
 ![api](https://img.shields.io/badge/VR-OpenXR-c8a24a)
 ![license](https://img.shields.io/badge/license-Freeware-444)
 
-| ⬇ Download | ♥ Support the project |
-| :---: | :---: |
-| [**Latest version**](../../releases/latest) | [**Donate**](https://ko-fi.com/josevitor11) |
+| ⬇ Download | 💬 Discord | ♥ Support the project |
+| :---: | :---: | :---: |
+| [**Latest version**](../../releases/latest) | [**Join the Discord**](https://discord.gg/P7wEb2h3YE) | [**Donate**](https://ko-fi.com/josevitor11) |
+| | Suggestions · Bug reports · Testers | |
 
-[How to use](#how-to-use) · [Controls](#controls) · [What's new](#whats-new-in-003) · [Compatibility](#compatibility) · [Bugs](#not-yet-implemented-or-tested-bugs-i-noticed) · [Português](README.pt-BR.md)
+[How to use](#how-to-use) · [Controls](#controls)  · [Compatibility](#compatibility) 
 
 </div>
 
 > Mafia 2 was the first game I played as a kid, and it became my favorite. I always wanted to play it in VR, so in my free time I decided to create this mod. This mod is in an early development version, it may have bugs as the story progresses, and more time is needed to test and fix it. But it is already 100% playable.
 
----
 
-## What's new in 0.0.3
-
-- **New 64-bit helper process (`m2vr_xrhost.exe`).** The heavy VR runtime work now runs in its own 64-bit process instead of inside the game. Mafia II is a 32-bit process with limited memory, so this leaves its memory for the game itself.
-- **Considerably better performance.** The eye textures now go straight from the graphics card to the helper process.
-- **The game's default anti-aliasing is disabled.** It turned out the game wasn't using FXAA: the setting doubled the rendering resolution, which was very heavy, especially for a 32-bit process.
-- **Lighter 100% resolution in the launcher.** It no longer includes the extra safety border (`FovMargin`), only the headset's field of view. On Quest 2, 100% went from 3224 x 3352 to 2504 x 2592 per eye (10.8 MP down to 6.5 MP).
-- **`FovMargin` now defaults to 0** in the launcher and in the default `m2vr.ini`. Without the border, a thin black edge may show at the edge of your vision when you turn your head very fast. If that bothers you, raise `FovMargin` in `m2vr.ini`.
-- **The installer is now in English** and copies the new files to the game folder, replacing any files with the same name.
 
 See the [Releases](../../releases) page for the full notes of each version.
 
 ## Implemented features
 
-- **Native 3D stereo (beta), optional AFR.**
+- **Native 3D stereo.**
 - **6DoF head tracking.**
 - **Motion controls with 6-DOF:** use the headset controllers to aim, shoot, reload manually, fight and drive.
 - **Hand poses and inverse kinematics (IK) for the arms.**
@@ -69,7 +61,7 @@ Requirements: Windows 10/11, a Vulkan GPU (because of DXVK), an active **32-bit*
 
 ### Automatic installation (recommended)
 
-1. Download and run **`Mafia II Classic VR MOD by josvitorkjr45 v0.0.3.exe`** from the [Releases](../../releases/latest) page.
+1. Download and run **`Mafia II Classic VR MOD - Autoinstaller`** from the [Releases](../../releases/latest) page.
 2. Follow the instructions. The installer locates the game folder or lets you select the folder that contains `mafia2.exe`, copies the mod files (replacing any files with the same name), automatically detects the game version and applies the necessary patch to make the supported build's executable 100% compatible with M2VR and the 4 GB memory patch, and creates an M2VR Launcher shortcut on the desktop. A backup of the original `mafia2.exe` is saved as `mafia2.exe.bak`, and the uninstaller restores it.
 
 > **Note:** Before starting the game, it is recommended to set all graphics settings to low and then gradually increase them to test performance. If you have an AMD graphics card, keep PhysX disabled.
@@ -78,22 +70,10 @@ Requirements: Windows 10/11, a Vulkan GPU (because of DXVK), an active **32-bit*
 
 ### Manual installation
 
-Copy these files to the folder where `mafia2.exe` is:
 
-| File | Function | Source |
-| --- | --- | --- |
-| `m2vr.asi` | VR mod | **ZIP** package from the Releases page |
-| `m2vr_xrhost.exe` | 64-bit helper process that runs the VR runtime | same ZIP |
-| `m2vr_xrbridge.dll` + `m2vr_xrbridge.json` | connect the game to the helper process | same ZIP |
-| `m2vr_openvr.dll` + `m2vr_openvr.json` | mod components | same ZIP |
-| `M2VR-Launcher.exe` | M2VR launcher | same ZIP |
-| `m2vr.ini` | configuration file | same ZIP |
-| `m2vr.ini.padrao-do-lancador` + `videoconfig.cfg.m2vr-original` | default / original configuration copies | same ZIP |
-| `dxvk.conf` | DXVK settings | same ZIP |
-| `dinput8.dll` | loads `m2vr.asi` | [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) (32-bit) |
-| `d3d9.dll` | runs Direct3D 9 over Vulkan | [DXVK](https://github.com/doitsujin/dxvk) (32-bit) |
-| `openxr_loader.dll` + `jsoncpp.dll` | OpenXR loader files | [OpenXR-SDK](https://github.com/KhronosGroup/OpenXR-SDK) (32-bit) |
-| `Patch-Mafia2.exe` "Directory Mafia2/pc" | applies the compatibility patches and the 4 GB patch (run it once, do not copy it to the game folder) | M2VR package |
+Copy all files to the directory containing mafia2.exe, then apply the patch:
+
+Patch-Mafia2.exe "Directoryofmafia2/pc/mafia2.exe"
 
 ## Controls
 
@@ -146,22 +126,6 @@ Copy these files to the folder where `mafia2.exe` is:
 
 **In menus:** point with the right controller (it becomes the mouse), if it bugs out you can also move the cursor with the right thumbstick, **A** or the right trigger click, **B** goes back, to center the camera on the body hold the default left menu shortcut for a few seconds or F10.
 
-## Not yet implemented or tested, Bugs I noticed
-
-| Item | Status |
-| --- | --- |
-| **Without the 4 GB patch** | does not run; reducing the mod's memory usage to fit in 2 GB is a future idea |
-| **Other headsets** (Quest 3/Pro, Pico 4, Index, Reverb G2, Vive Pro 2, Beyond, PSVR2) | profiles exist in the launcher, **nothing tested** |
-| **Configurable trigger and grip sensitivity** | today the activation point is fixed; planned |
-| **In-game settings menu** | does not exist; use the launcher and `m2vr.ini` |
-| **Cursor in menus, purchases and map** | We recommend moving the cursor with the thumbstick. Control by hand movement may still fail. |
-| **Camera in fight finishers** | Sometimes the camera ends with the wrong rotation. |
-| **Black edge when turning the head fast** | `FovMargin` is now 0 by default; raise it in `m2vr.ini` if you notice it. |
-| **Mafia II Definitive Edition** (64-bit) | not supported; it would be a separate mod |
-| **Linux / Wine** | not tested |
-| **Realistic cover system that follows the player's height** | Will be implemented in upcoming updates |
-
-The game is still in an early testing phase. There are some bugs, but they do not prevent playing the entire main campaign; I continue working on the fixes.
 
 ## Reporting a bug
 
